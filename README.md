@@ -1,15 +1,13 @@
 # US Airline Passenger Satisfaction and Loyalty Prediction
 
-The dataset presents a view of passenger experiences and satisfaction levels with various aspects of airline services. The shape of the database (satisfaction_2015) is (129880, 24). 
-●	Customer satisfaction prediction: Predict the satisfaction levels of passengers based on the various service dimensions and personal preferences. This could help in identifying key factors that drive satisfaction and areas needing improvement.
-●	Churn prediction for disloyal customers: Identify patterns and factors leading to customer disloyalty. By predicting which customers are at risk of becoming disloyal, airlines can implement strategies to improve their experience and retain them.
+The project leverages machine learning to predict airline passenger satisfaction and identify the key features contributing to customer loyalty. Utilizing passenger survey data, the project seeks to enable the airline to modify its services to enhance passenger experience and loyalty.
 
-### High-Level Solution Overview 
-Step 1: Data Preparation
-We will clean the data to ensure that it is suitable to run through our model. This includes replacing or deleting missing values, doing preliminary data analysis, ensuring our data is formatted correctly, and selecting or dropping features as needed.
+## Prediction 1 
+Model Development and Evaluation: Five models were evaluated for predicting passenger satisfaction: Logistic Regression, Decision Tree, SVM, Random Forest, and Gradient Boosting, with accuracy scores of 0.883, 0.914, 0.883, 0.963, and 0.957, respectively. Random Forest, which had the highest accuracy, was further refined using GridSearchCV, leading to optimal parameters of max_depth 15 and max_features 13. It also achieved the top AUC score of 0.994. The Mean Decrease Impurity (MDI) identified influential features like Online Boarding, Inflight WiFi, and Business Class, which aligned with patterns observed during the Exploratory Data Analysis (EDA) indicating higher satisfaction among business class and long-distance travelers.
 
-Step 2: Model Training
-We will start with simple models to train our data on first, like logistic regression and decision trees, then segue into more complicated models, like neural networks, to compare evaluation metrics between models. 
+## Prediction 2 
+Model Development and Evaluation: Customer loyalty was analyzed using several models, with Random Forest and Gradient Boosting performing best, likely due to their effectiveness in handling large datasets. Key factors influencing loyalty included flight distance, age, travel type, and satisfaction, with business travelers showing higher loyalty. Other factors like easy booking, online boarding, and convenient flight times also significantly impacted loyalty. The analysis suggests that enhancements in customer service aspects such as booking ease and airport navigation could significantly affect loyalty retention.
 
-Step 3: Model Improvement
-We will consider accuracy as our main evaluation metric. We will also evaluate whether our model might be making assumptions incorrectly, based on inconsistencies in the data or flawed model formatting. Depending on the type of model we are using, we will adjust our hyperparameters in order to improve our main evaluation metrics.
+## Limitations
+The analysis and dataset face limitations primarily due to the age of the data, having been recorded in 2015, which reduces its applicability to current real-life scenarios without tests on
+more recent or new data. Additionally, the presence of multicollinearity among some variables may complicate the interpretation of the results. To enhance the model effectiveness, conducting churn analysis or entering loyalty memberships with data from various time periods is recommended, which would provide insights into changing patterns over time and improve the relevance and accuracy of the findings.
