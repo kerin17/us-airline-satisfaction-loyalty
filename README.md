@@ -8,6 +8,10 @@ Model Development and Evaluation: Five models were evaluated for predicting pass
 ## Prediction 2 
 Model Development and Evaluation: Customer loyalty was analyzed using several models, with Random Forest and Gradient Boosting performing best, likely due to their effectiveness in handling large datasets. Key factors influencing loyalty included flight distance, age, travel type, and satisfaction, with business travelers showing higher loyalty. Other factors like easy booking, online boarding, and convenient flight times also significantly impacted loyalty. The analysis suggests that enhancements in customer service aspects such as booking ease and airport navigation could significantly affect loyalty retention.
 
+
+## Insight and Recommendation
+[hide]
+
 ## Limitations
 The analysis and dataset face limitations primarily due to the age of the data, having been recorded in 2015, which reduces its applicability to current real-life scenarios without tests on
 more recent or new data. Additionally, the presence of multicollinearity among some variables may complicate the interpretation of the results. To enhance the model effectiveness, conducting churn analysis or entering loyalty memberships with data from various time periods is recommended, which would provide insights into changing patterns over time and improve the relevance and accuracy of the findings.
